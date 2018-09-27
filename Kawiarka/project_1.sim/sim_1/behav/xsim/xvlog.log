@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/choose_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module choose_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/dzielnik.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/licznik.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/licznik.v:25]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/old_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mdk_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/ready_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sprawnosc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/wyswietlacz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wyswietlacz_4x7
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sim_1/new/test_bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench

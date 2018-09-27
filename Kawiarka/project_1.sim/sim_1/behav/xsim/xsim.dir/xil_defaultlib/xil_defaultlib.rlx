@@ -1,0 +1,15 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/defines.v,1537816344,verilog,,,,,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sim_1/new/test_bench.v,1537998942,verilog,,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,test_bench,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/choose_module.v,1537999446,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/dzielnik.v,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,choose_module,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,1537999896,verilog,,,,,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/dzielnik.v,1537731493,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/licznik.v,,divider,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/licznik.v,1537993264,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/main.v,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,counter,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/main.v,1537817686,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/old_main.v,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,main,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/old_main.v,1538000135,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/ready_test.v,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,mdk_main,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/ready_test.v,1537817616,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/wyswietlacz.v,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,sprawnosc,,,,,,,,
+C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/wyswietlacz.v,1537993121,verilog,,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sim_1/new/test_bench.v,C:/Users/furen/Desktop/Kawiarka_editv2/project_1.srcs/sources_1/new/defines.v,wyswietlacz_4x7,,,,,,,,

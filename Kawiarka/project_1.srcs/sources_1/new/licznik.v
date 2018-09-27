@@ -1,0 +1,96 @@
+`include "defines.v"
+//////////////////////////////////////////////////////////////////////////////////
+// Licznik robienia kawy
+//////////////////////////////////////////////////////////////////////////////////
+
+module counter(clk, count_in, count_out, count_secs);
+
+    input clk; 
+    input [3:0] count_in;
+    output reg count_out;
+    output wire [6:0]count_secs; // przekazanie pozosta³ego czasu (w sekundach) do modu³u g³ownego
+                                 // potrzebna do wyœwietlacza - 7 bit = max 127 sek (wystarczy)
+
+    reg [22:0] count_to_0 = 0;           //rejestr 23 bitowy, przy zegarze 50kHz wystarczy na odliczanie od 167 sekund
+    // pozostaje przeliczyæ czasy
+    // 1 s = 1 000 000 000 ns
+    // 1 s = 1 000 000 us
+    parameter tick_every = 20;       // parametr co ile nastêpuje tick zegara (w us)
+    integer mc = 1000000/tick_every; // mno¿nik dla czasu w sekundach (czêstotliwoœæ w Hz)
+    
+    // wysy³amy pozosta³y czas do modu³u top (w sekundach)
+    assign count_secs = count_to_0/mc;
+ 
+    always @(count_in) 
+        begin 
+            case (count_in)
+                `LICZNIK_RESET: // reset licznika
+                    begin
+                        count_out <= `NIC_NIE_ODLICZAM;
+                        count_to_0 <= 0;
+                    end
+                
+                `ODLICZ_K1:   // maszyna mieli kawê dla opcji 1
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_K1*mc;
+                    end
+                `ODLICZ_K2:   // maszyna mieli kawê dla opcji 2
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_K2*mc;
+                    end
+                `ODLICZ_K3:   // maszyna mieli kawê dla opcji 3
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_K3*mc;
+                    end
+                `ODLICZ_NAPELNIJ:
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_NAPELNIJ*mc;
+                    end    
+                `ODLICZ_GRZANIE: // maszyna grzeje wode
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_GRZANIE*mc;
+                    end
+                `ODLICZ_WSYP: // maszyna wsypuje kawê
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_WSYP*mc;
+                        end
+                `ODLICZ_WODA_OP1:   // maszyna wlewa wrz¹tek dla opcji 1
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_WODA_OPCJA1*mc;                     
+                    end
+                `ODLICZ_WODA_OP2:   // maszyna wlewa wrz¹tek dla opcji 2
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_WODA_OPCJA2*mc;
+                    end
+                `ODLICZ_WODA_OP3:   // maszyna wlewa wrz¹tek dla opcji 3
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_WODA_OPCJA3*mc;
+                    end
+                    
+                `ODLICZ_CZYSZ:      // maszyna usuwa zu¿yt¹ kawê, czyœci instalacjê 
+                    begin
+                        count_out = `ODLICZAM;
+                        count_to_0 = `CZAS_CZYSZ*mc;
+                    end
+                  
+            endcase;   
+        end  
+    
+    always @(negedge clk) // odliczanie do 0
+        begin
+            if(count_out == `ODLICZAM && count_to_0 > 0)
+                count_to_0 <= count_to_0 - 1;
+            else
+                count_out <= `SKONCZYLEM_ODLICZAC; // skoñczyliœmy odliczaæ    
+        end
+        
+endmodule
